@@ -1,0 +1,16 @@
+---
+title: "My Map"
+author: "Daniel Timbrell"
+date: "14 July 2017"
+output:
+  html_document:
+    self_contained: no
+---
+```{r}
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-6.401900, lat=54.007776, popup="Leopold Bloom's House")
+m 
+```
